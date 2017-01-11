@@ -1,1 +1,1 @@
-Experimental scripts, be careful using them. Errors may occur.
+Experimental scripts, be careful using them, they may not even work and/or errors may occur.
