@@ -8,10 +8,10 @@ app.preferences.rulerUnits = Units.PIXELS;
 
 function imageDimensions() {
     
-    var len = app.activeDocument.layerSets.getByName("Processing").layers.length; // Count images
+    //var len = app.activeDocument.layerSets.getByName("Processing").layers.length; // Count images
     
-    for (var i = 0; i < len; i++) {
-        var layr = app.activeDocument.layerSets.getByName("Processing").layers[i];
+    for (var i = 0; i < layerNo; i++) {
+        var layr = activeLay.layers[i];
         var SWidth  = app.activeDocument.width.as('px');    
         var SHeight = app.activeDocument.height.as('px');    
         var bounds = layr.bounds;    
@@ -73,4 +73,4 @@ function groupLayers() {
 imageDimensions();
 groupLayers();
 app.preferences.rulerUnits = defaultRulerUnits; // restore the ruler
-alert("Boom!\n" + docRef.layerSets.getByName("Processing").layers.length + " Images resized!"); // Show image count
+alert(activeLay.layers.length + " Images resized!"); // Show image count
