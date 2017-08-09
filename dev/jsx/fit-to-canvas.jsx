@@ -24,12 +24,12 @@ function imageDimensions() {
         app.preferences.interpolation = ResampleMethod.BICUBIC; // resample interpolation bicubic    
         
         if (LWidth/LHeight<SWidth/SHeight) { // Smart Object layer Aspect Ratio less the Canvas area Aspect Ratio     
-           var percentageChange = ((SWidth/LWidth)*100);  // Resize to canvas area width    
+           var percentageChange = ((SWidth/LWidth)*101);  // Resize to canvas area width    
            layr.resize(percentageChange,percentageChange,AnchorPosition.MIDDLECENTER);    
         }
         
         else {     
-          var percentageChange = ((SHeight/LHeight)*100); // resize to canvas area height    
+          var percentageChange = ((SHeight/LHeight)*101); // resize to canvas area height    
           layr.resize(percentageChange,percentageChange,AnchorPosition.MIDDLECENTER);    
         }
         
