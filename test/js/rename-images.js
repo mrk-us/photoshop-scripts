@@ -21,9 +21,9 @@ function prompts() {
 }
 
 function renameLayers() {
+  var digit = 1;
   for ( i = 0; i < layerNo; i++ ) {
-    var digit = 1,
-        layerRef = activeLay.layers[i];
+    var layerRef = activeLay.layers[i];
 
     // Always use double digits
     if ( digit < 10 ) {
